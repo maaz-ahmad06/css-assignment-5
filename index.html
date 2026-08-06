@@ -3,144 +3,320 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Netflix Clone - Watch TV Shows Online, Watch Movies Online</title>
+  <title>Netflix Pakistan - Watch TV Shows Online, Watch Movies Online</title>
+  
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="https://assets.nflxext.com/us/ffe/siteui/common/icons/nficon2023.ico" />
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  
+  <!-- CSS Stylesheet -->
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <!-- ==================== HERO / HEADER SECTION ==================== -->
+  <!-- ==================== HERO / BANNED HEADER ==================== -->
   <header class="hero">
-    <div class="overlay"></div>
+    <div class="hero-dark-overlay"></div>
+    
     <nav class="navbar">
-      <div class="logo">NETFLIX</div>
-      <div class="nav-actions">
-        <select class="lang-select">
-          <option value="en">English</option>
-        </select>
-        <a href="#" class="btn btn-red btn-signin">Sign In</a>
+      <!-- Netflix Premium Logo Wordmark SVG -->
+      <a href="#" class="logo-wrapper" aria-label="Netflix Home">
+        <svg viewBox="0 0 111 30" xmlns="http://www.w3.org/2000/svg" class="netflix-logo-svg">
+          <path d="M10.5 0h6.66l12.7 30h-6.84L13.8 7.37 7.03 30H.17V0H7v19.4L10.5 0zM35.25 0h17.9v5.9h-11.23V12h10.05v5.9H41.92v6.2h11.23V30h-17.9V0zm34.8 5.9h-8.08V30h-6.66V5.9h-8.08V0h22.82v5.9zM87.87 0h6.66v24.1h10.9v5.9H87.87V0zm22.3-.23L120.7 30h-6.84l-10.45-23L96.38 30H89.5L100 0h6.66l3.5 8.35L113.63 0z" fill="#E50914" />
+        </svg>
+      </a>
+      
+      <div class="nav-controls">
+        <div class="custom-select-box">
+          <!-- Globe icon -->
+          <svg class="icon-globe" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0zm0 1a7 7 0 1 1 0 14A7 7 0 0 1 8 1zm0 1.5a.5.5 0 0 0-.5.5v2h-1a.5.5 0 0 0 0 1h1v2.5h-2a.5.5 0 0 0 0 1h2v3a.5.5 0 0 0 1 0v-3h2a.5.5 0 0 0 0-1h-2V6h1a.5.5 0 0 0 0-1h-1V3a.5.5 0 0 0-.5-.5z"/>
+            <path fill-rule="evenodd" d="M3.5 8a4.5 4.5 0 1 1 9 0 4.5 4.5 0 0 1-9 0zm4.5-3.5A3.5 3.5 0 1 0 8 11.5 3.5 3.5 0 0 0 8 4.5z"/>
+          </svg>
+          <select class="lang-picker" aria-label="Select Language">
+            <option value="en" selected>English</option>
+          </select>
+          <!-- Chevron down -->
+          <svg class="icon-dropdown" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path d="M7 10l5 5 5-5H7z" />
+          </svg>
+        </div>
+        <a href="#" class="btn btn-red sign-in-btn">Sign In</a>
       </div>
     </nav>
 
-    <div class="hero-content">
-      <h1>Unlimited movies, TV shows, and more.</h1>
-      <p class="hero-subtitle">Watch anywhere. Cancel anytime.</p>
-      <p class="hero-description">Ready to watch? Enter your email to create or restart your membership.</p>
-      <form class="email-form" action="#" method="GET">
-        <input type="email" placeholder="Email address" required />
-        <button type="submit" class="btn btn-red btn-get-started">
-          Get Started &gt;
+    <div class="hero-content-wrapper">
+      <h1 class="hero-main-title">Unlimited movies, TV shows, and more.</h1>
+      <p class="hero-sub-title">Watch anywhere. Cancel anytime.</p>
+      <p class="hero-call-to-action">Ready to watch? Enter your email to create or restart your membership.</p>
+      
+      <form class="email-capture-form" action="#" method="GET">
+        <div class="floating-label-input">
+          <input type="email" id="email-hero" required placeholder=" " autocomplete="email" />
+          <label for="email-hero">Email address</label>
+        </div>
+        <button type="submit" class="btn btn-red btn-large-cta">
+          Get Started
+          <svg class="chevron-arrow-svg" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
+          </svg>
         </button>
       </form>
     </div>
   </header>
 
-  <div class="section-divider"></div>
+  <div class="section-divider-bar"></div>
 
-  <!-- ==================== FEATURES SECTION ==================== -->
-  <section class="features">
-    <!-- Feature 1 -->
-    <div class="feature-container">
-      <div class="feature-text">
-        <h2>Enjoy on your TV</h2>
-        <p>Watch on Smart TVs, Playstation, Xbox, Chromecast, Apple TV, Blu-ray players, and more.</p>
-      </div>
-      <div class="feature-media">
-        <div class="media-box">
-          <p class="media-placeholder">[ TV Screen Feature Graphic ]</p>
+  <!-- ==================== FEATURE HIGHLIGHTS ==================== -->
+  <section class="netflix-features-grid">
+    
+    <!-- Feature 1: Play on TV -->
+    <div class="feature-block-item">
+      <div class="feature-block-container">
+        <div class="feature-block-text">
+          <h2 class="feature-heading">Enjoy on your TV</h2>
+          <p class="feature-paragraph">Watch on Smart TVs, Playstation, Xbox, Chromecast, Apple TV, Blu-ray players, and more.</p>
+        </div>
+        <div class="feature-block-media">
+          <div class="media-container-relative">
+            <img src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/tv.png" alt="Television Mockup" class="device-mockup-img" />
+            <div class="video-overlay tv-overlay-position">
+              <video class="overlay-video-player" autoplay playsinline muted loop>
+                <source src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/video-tv-0819.m4v" type="video/mp4" />
+              </video>
+            </div>
+          </div>
         </div>
       </div>
     </div>
 
-    <div class="section-divider"></div>
+    <div class="section-divider-bar"></div>
 
-    <!-- Feature 2 -->
-    <div class="feature-container reverse">
-      <div class="feature-text">
-        <h2>Download your shows to watch offline</h2>
-        <p>Save your favorites easily and always have something to watch.</p>
-      </div>
-      <div class="feature-media">
-        <div class="media-box">
-          <p class="media-placeholder">[ Mobile Offline Download Graphic ]</p>
+    <!-- Feature 2: Download Offline -->
+    <div class="feature-block-item flip-layout">
+      <div class="feature-block-container">
+        <div class="feature-block-text">
+          <h2 class="feature-heading">Download your shows to watch offline</h2>
+          <p class="feature-paragraph">Save your favorites easily and always have something to watch.</p>
+        </div>
+        <div class="feature-block-media">
+          <div class="media-container-relative">
+            <img src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/mobile-0819.jpg" alt="Smartphone Mockup" class="device-mockup-img" />
+            
+            <!-- Custom Downloads Status card -->
+            <div class="downloading-popup-card">
+              <img src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/boxshot.png" alt="Stranger Things poster thumbnail" class="thumbnail-cover" />
+              <div class="download-text-meta">
+                <span class="title-bold">Stranger Things</span>
+                <span class="status-blue-text">Downloading...</span>
+              </div>
+              <div class="animation-icon-holder">
+                <div class="gif-spinner-icon"></div>
+              </div>
+            </div>
+            
+          </div>
         </div>
       </div>
     </div>
 
-    <div class="section-divider"></div>
+    <div class="section-divider-bar"></div>
 
-    <!-- Feature 3 -->
-    <div class="feature-container">
-      <div class="feature-text">
-        <h2>Watch everywhere</h2>
-        <p>Stream unlimited movies and TV shows on your phone, tablet, laptop, and TV.</p>
-      </div>
-      <div class="feature-media">
-        <div class="media-box">
-          <p class="media-placeholder">[ Multi-Device Streaming Graphic ]</p>
+    <!-- Feature 3: Watch Everywhere -->
+    <div class="feature-block-item">
+      <div class="feature-block-container">
+        <div class="feature-block-text">
+          <h2 class="feature-heading">Watch everywhere</h2>
+          <p class="feature-paragraph">Stream unlimited movies and TV shows on your phone, tablet, laptop, and TV.</p>
         </div>
+        <div class="feature-block-media">
+          <div class="media-container-relative">
+            <img src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/device-pile.png" alt="Multiple Devices Pile Mockup" class="device-mockup-img" />
+            <div class="video-overlay devices-overlay-position">
+              <video class="overlay-video-player" autoplay playsinline muted loop>
+                <source src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/video-devices.m4v" type="video/mp4" />
+              </video>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-divider-bar"></div>
+
+    <!-- Feature 4: Kids Profiles -->
+    <div class="feature-block-item flip-layout">
+      <div class="feature-block-container">
+        <div class="feature-block-text">
+          <h2 class="feature-heading">Create profiles for kids</h2>
+          <p class="feature-paragraph">Send kids on adventures with their favorite characters in a space made just for them—free with your membership.</p>
+        </div>
+        <div class="feature-block-media">
+          <div class="media-container-relative">
+            <img src="https://occ-0-116-114.1.nflxso.net/dnm/api/v6/19OhWN2dO19C9txTON9tvTFteYA/AAAABejKYujIIDQciqmGJJ8BtXkYKKTi5jiqhcHB1NIEYgoO7YV45mK2r-5-3t59elvbNs450sHSyX9gqgFL240QSh1GBs49G9p305gX.png?r=df1" alt="Kids Profiles grid image" class="device-mockup-img" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <div class="section-divider-bar"></div>
+
+  <!-- ==================== FAQ ACCORDION SECTION ==================== -->
+  <section class="faq-accordion-section">
+    <div class="faq-container-main">
+      <h2 class="faq-main-title">Frequently Asked Questions</h2>
+      
+      <div class="accordion-items-wrapper">
+        
+        <!-- Accordion Item 1 -->
+        <details class="faq-row-item">
+          <summary class="faq-row-trigger">
+            <span>What is Netflix?</span>
+            <svg class="plus-x-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 5V19M5 12H19" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </summary>
+          <div class="faq-row-content">
+            <p>Netflix is a streaming service that offers a wide variety of award-winning TV shows, movies, anime, documentaries, and more on thousands of internet-connected devices.</p>
+            <p>You can watch as much as you want, whenever you want without a single commercial – all for one low monthly price. There's always something new to discover and new TV shows and movies are added every week!</p>
+          </div>
+        </details>
+
+        <!-- Accordion Item 2 -->
+        <details class="faq-row-item">
+          <summary class="faq-row-trigger">
+            <span>How much does Netflix cost?</span>
+            <svg class="plus-x-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 5V19M5 12H19" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </summary>
+          <div class="faq-row-content">
+            <p>Watch Netflix on your smartphone, tablet, Smart TV, laptop, or streaming device, all for one fixed monthly fee. Plans range from Rs 250 to Rs 1,100 a month. No extra costs, no contracts.</p>
+          </div>
+        </details>
+
+        <!-- Accordion Item 3 -->
+        <details class="faq-row-item">
+          <summary class="faq-row-trigger">
+            <span>Where can I watch?</span>
+            <svg class="plus-x-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 5V19M5 12H19" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </summary>
+          <div class="faq-row-content">
+            <p>Watch anywhere, anytime. Sign in with your Netflix account to watch instantly on the web at netflix.com from your personal computer or on any internet-connected device that offers the Netflix app, including smart TVs, smartphones, tablets, streaming media players and game consoles.</p>
+            <p>You can also download your favorite shows with the iOS or Android app. Use downloads to watch while you're on the go and without an internet connection. Take Netflix with you anywhere.</p>
+          </div>
+        </details>
+
+        <!-- Accordion Item 4 -->
+        <details class="faq-row-item">
+          <summary class="faq-row-trigger">
+            <span>How do I cancel?</span>
+            <svg class="plus-x-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 5V19M5 12H19" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </summary>
+          <div class="faq-row-content">
+            <p>Netflix is flexible. There are no pesky contracts and no commitments. You can easily cancel your account online in two clicks. There are no cancellation fees – start or stop your account anytime.</p>
+          </div>
+        </details>
+
+        <!-- Accordion Item 5 -->
+        <details class="faq-row-item">
+          <summary class="faq-row-trigger">
+            <span>What can I watch on Netflix?</span>
+            <svg class="plus-x-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 5V19M5 12H19" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </summary>
+          <div class="faq-row-content">
+            <p>Netflix has an extensive library of feature films, documentaries, TV shows, anime, award-winning Netflix originals, and more. Watch as much as you want, anytime you want.</p>
+          </div>
+        </details>
+
+        <!-- Accordion Item 6 -->
+        <details class="faq-row-item">
+          <summary class="faq-row-trigger">
+            <span>Is Netflix good for kids?</span>
+            <svg class="plus-x-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 5V19M5 12H19" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </summary>
+          <div class="faq-row-content">
+            <p>The Netflix Kids experience is included in your membership to give parents control while kids enjoy family-friendly TV shows and movies in their own space.</p>
+            <p>Kids profiles come with PIN-protected parental controls that let you restrict the maturity rating of content kids can watch and block specific titles you don’t want kids to see.</p>
+          </div>
+        </details>
+
+      </div>
+
+      <div class="faq-bottom-cta">
+        <p class="faq-bottom-text">Ready to watch? Enter your email to create or restart your membership.</p>
+        <form class="email-capture-form" action="#" method="GET">
+          <div class="floating-label-input">
+            <input type="email" id="email-faq" required placeholder=" " autocomplete="email" />
+            <label for="email-faq">Email address</label>
+          </div>
+          <button type="submit" class="btn btn-red btn-large-cta">
+            Get Started
+            <svg class="chevron-arrow-svg" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
+            </svg>
+          </button>
+        </form>
       </div>
     </div>
   </section>
 
-  <div class="section-divider"></div>
+  <div class="section-divider-bar"></div>
 
-  <!-- ==================== FAQ SECTION ==================== -->
-  <section class="faq">
-    <h2>Frequently Asked Questions</h2>
-    <div class="faq-list">
-      <div class="faq-item">
-        <div class="faq-question">What is Netflix? <span>+</span></div>
+  <!-- ==================== PREMIUM FOOTER ==================== -->
+  <footer class="netflix-footer">
+    <div class="footer-inner-wrapper">
+      <p class="footer-hotline">Questions? Call <a href="tel:0008009191694" class="hotline-link">000-800-919-1694</a></p>
+      
+      <ul class="footer-links-grid-box">
+        <li><a href="#">FAQ</a></li>
+        <li><a href="#">Help Center</a></li>
+        <li><a href="#">Account</a></li>
+        <li><a href="#">Media Center</a></li>
+        <li><a href="#">Investor Relations</a></li>
+        <li><a href="#">Jobs</a></li>
+        <li><a href="#">Ways to Watch</a></li>
+        <li><a href="#">Terms of Use</a></li>
+        <li><a href="#">Privacy</a></li>
+        <li><a href="#">Cookie Preferences</a></li>
+        <li><a href="#">Corporate Information</a></li>
+        <li><a href="#">Contact Us</a></li>
+        <li><a href="#">Speed Test</a></li>
+        <li><a href="#">Legal Notices</a></li>
+        <li><a href="#">Only on Netflix</a></li>
+      </ul>
+      
+      <div class="footer-language-holder">
+        <div class="custom-select-box">
+          <svg class="icon-globe" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0zm0 1a7 7 0 1 1 0 14A7 7 0 0 1 8 1zm0 1.5a.5.5 0 0 0-.5.5v2h-1a.5.5 0 0 0 0 1h1v2.5h-2a.5.5 0 0 0 0 1h2v3a.5.5 0 0 0 1 0v-3h2a.5.5 0 0 0 0-1h-2V6h1a.5.5 0 0 0 0-1h-1V3a.5.5 0 0 0-.5-.5z"/>
+            <path fill-rule="evenodd" d="M3.5 8a4.5 4.5 0 1 1 9 0 4.5 4.5 0 0 1-9 0zm4.5-3.5A3.5 3.5 0 1 0 8 11.5 3.5 3.5 0 0 0 8 4.5z"/>
+          </svg>
+          <select class="lang-picker" aria-label="Select Language (Footer)">
+            <option value="en" selected>English</option>
+          </select>
+          <svg class="icon-dropdown" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path d="M7 10l5 5 5-5H7z" />
+          </svg>
+        </div>
       </div>
-      <div class="faq-item">
-        <div class="faq-question">How much does Netflix cost? <span>+</span></div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-question">Where can I watch? <span>+</span></div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-question">How do I cancel? <span>+</span></div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-question">What can I watch on Netflix? <span>+</span></div>
-      </div>
+      
+      <p class="footer-copyright-country">Netflix Pakistan</p>
     </div>
-
-    <p class="faq-cta-text">Ready to watch? Enter your email to create or restart your membership.</p>
-    <form class="email-form" action="#" method="GET">
-      <input type="email" placeholder="Email address" required />
-      <button type="submit" class="btn btn-red btn-get-started">
-        Get Started &gt;
-      </button>
-    </form>
-  </section>
-
-  <div class="section-divider"></div>
-
-  <!-- ==================== FOOTER SECTION ==================== -->
-  <footer class="footer">
-    <p class="footer-contact">Questions? Call <a href="#">000-800-919-1694</a></p>
-    <div class="footer-links">
-      <a href="#">FAQ</a>
-      <a href="#">Help Center</a>
-      <a href="#">Account</a>
-      <a href="#">Media Center</a>
-      <a href="#">Investor Relations</a>
-      <a href="#">Jobs</a>
-      <a href="#">Redeem Gift Cards</a>
-      <a href="#">Ways to Watch</a>
-      <a href="#">Terms of Use</a>
-      <a href="#">Privacy</a>
-      <a href="#">Cookie Preferences</a>
-      <a href="#">Corporate Information</a>
-      <a href="#">Contact Us</a>
-      <a href="#">Speed Test</a>
-      <a href="#">Legal Notices</a>
-      <a href="#">Only on Netflix</a>
-    </div>
-    <select class="lang-select footer-lang">
-      <option value="en">English</option>
-    </select>
-    <p class="footer-country">Netflix Pakistan</p>
   </footer>
 
 </body>
