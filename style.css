@@ -22,9 +22,9 @@ body {
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
 }
-.head-btn {
-    width: 100%;
-    height: 50px;
+.top-banner {
+  width: 100%;
+  height: 50px;
   position: fixed;
   top: 0;
   left: 0;
@@ -58,19 +58,57 @@ img {
   padding: 0 4%;
 }
 
-/* ---------- NAVBAR ---------- */
-.navbar {
+/* ---------- HERO (LANDING) ---------- */
+.hero {
+  position: relative;
+  overflow: hidden;
+  margin-top: 50px;
+  min-height: 100vh;
   display: flex;
   align-items: center;
-  justify-content: center;
-  margin-top: 50px;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.55) 0%,
+      rgba(0, 0, 0, 0.25) 50%,
+      #141414 100%
+    ),
+    linear-gradient(90deg, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.2) 60%);
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  top: -25%;
+  left: -25%;
+  width: 150%;
+  height: 150%;
+  background: url("images/bg-image.png") center/cover no-repeat;
+  transform: perspective(1000px) rotateX(12deg) rotateY(-20deg) rotateZ(20deg);
+  z-index: -1;
+}
+
+/* ----------HERO NAVBAR ---------- */
+.navbar {
+  width: 87%;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   padding: 18px 4%;
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.85) 10%);
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.85) 10%,
+    transparent 100%
+  );
+  z-index: 10;
 }
 
 .nf-logo {
   font-family: "Bebas Neue", "Arial Narrow", sans-serif;
-  margin-right: 420px;
   font-size: 50px;
   letter-spacing: 1px;
   color: #e50914;
@@ -78,7 +116,8 @@ img {
 }
 
 .nav-right {
-  margin-left: 420px;
+  display: flex;
+  align-items: center;
 }
 
 .btn-signin {
@@ -96,36 +135,7 @@ img {
   background: #b0060f;
 }
 
-.lang-select {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  border: 1px solid #757575;
-  border-radius: 3px;
-  padding: 5px 8px;
-  font-size: 13px;
-  color: #fff;
-  background: rgba(0, 0, 0, 0.6);
-}
-
-/* ---------- HERO (LANDING) ---------- */
-.hero {
-  position: relative;
-  min-height: 90vh;
-  display: flex;
-  align-items: center;
-  background:
-    linear-gradient(
-      180deg,
-      rgba(0, 0, 0, 0.55) 0%,
-      rgba(0, 0, 0, 0.25) 50%,
-      #141414 100%
-    ),
-    linear-gradient(90deg, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.2) 60%),
-    url("https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?q=80&w=1600&auto=format&fit=crop")
-      center/cover no-repeat;
-}
-
+/* HERO CONTENT */
 .hero-content {
   position: relative;
   z-index: 2;
@@ -162,12 +172,6 @@ img {
   margin: 0 auto;
 }
 
-@media (min-width: 560px) {
-  .email-cta {
-    flex-direction: row;
-  }
-}
-
 .email-cta input[type="email"] {
   flex: 1;
   padding: 16px 14px;
@@ -182,23 +186,27 @@ img {
 }
 
 .btn-get-started {
+  width: 280px;
+  margin: auto;
   background: #e50914;
   color: #fff;
   border: none;
   border-radius: 4px;
-  padding: 14px 22px;
-  font-size: 19px;
+  padding: 10px;
+  margin-top: 10px;
+  font-size: 22px;
   font-weight: 600;
   cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
   white-space: nowrap;
   transition: background 0.2s;
 }
 .btn-get-started:hover {
   background: #b0060f;
+}
+.email-cta p{
+font-size: 15px;
+color: #b3b3b3;
+margin-top: 10px;
 }
 
 /* ---------- DIVIDER BAND ---------- */
