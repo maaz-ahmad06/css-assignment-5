@@ -209,97 +209,53 @@ color: #b3b3b3;
 margin-top: 10px;
 }
 
-/* ---------- DIVIDER BAND ---------- */
-.divider-band {
-  border-top: 8px solid #232323;
-  padding: 60px 0;
+hr{
+    width: 95%;
+    margin: auto;
+}
+/* ---------- TRENDING SECTION ---------- */
+.trending-section {
+    width: 85%;
+    margin: auto;
+  padding: 20px 4% 60px;
 }
 
-.feature-row {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 40px;
-  padding: 40px 0;
-  text-align: center;
+.trending-section h2 {
+  font-size: 25px;
+  font-weight: 700;
+  margin-bottom: 20px;
 }
 
-@media (min-width: 900px) {
-  .feature-row {
-    flex-direction: row;
-    text-align: left;
-  }
-  .feature-row.reverse {
-    flex-direction: row-reverse;
-  }
+.trending-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
 }
 
-.feature-text {
-  flex: 1;
-}
-.feature-text h2 {
-  font-size: clamp(28px, 4vw, 44px);
-  font-weight: 800;
-  margin-bottom: 14px;
-}
-.feature-text p {
-  font-size: clamp(16px, 2vw, 20px);
-  color: #e5e5e5;
-}
-
-.feature-media {
-  flex: 1;
+.trending-item {
   position: relative;
-  border-radius: 6px;
-  overflow: hidden;
-}
-.feature-media img {
-  width: 100%;
-  border-radius: 6px;
+  overflow: visible;
 }
 
-/* Floating device mock overlay for feature 2 */
-.mobile-mock {
-  position: absolute;
-  bottom: 14%;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 60%;
-  background: #000;
-  border: 2px solid #333;
+.trending-item img {
+  width: 90%;
+  height: 300px;
   border-radius: 10px;
-  padding: 10px 12px;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+  display: block;
 }
-.mobile-mock img {
-  width: 46px;
-  height: 46px;
-  border-radius: 4px;
-  object-fit: cover;
-}
-.mobile-mock .mm-text {
-  flex: 1;
-}
-.mobile-mock .mm-title {
-  font-size: 13px;
-  font-weight: 600;
-}
-.mobile-mock .mm-sub {
-  font-size: 11px;
-  color: #0071eb;
-}
-.mobile-mock .mm-icon {
-  width: 26px;
-  height: 26px;
-  border-radius: 50%;
-  background: #e50914;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 12px;
+
+.trending-item p {
+  position: absolute;
+  bottom: -20px;
+  left: -25px;
+  margin: 0;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 150px;
+  line-height: 1;
+  color: #000;
+  -webkit-text-stroke: 2px #fff;
+  paint-order: stroke fill;
+  z-index: 2;
 }
 
 /* ---------- FAQ ---------- */
