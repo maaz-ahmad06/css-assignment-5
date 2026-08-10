@@ -16,7 +16,7 @@ html {
 }
 
 body {
-  background: #141414;
+  background: #000000;
   color: #fff;
   font-family: "Inter", "Helvetica Neue", Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -236,6 +236,11 @@ hr{
   position: relative;
   overflow: visible;
 }
+.trending-item:hover{
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
 
 .trending-item img {
   width: 90%;
@@ -256,6 +261,45 @@ hr{
   -webkit-text-stroke: 2px #fff;
   paint-order: stroke fill;
   z-index: 2;
+}
+
+/* ---------- MORE REASONS ---------- */
+.more-reasons {
+    width: 85%;
+    margin: auto;
+  padding: 20px 4% 60px;
+}
+
+.more-reasons h2 {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.reasons-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.reason-item {
+  position: relative;
+  overflow: visible;
+  background: linear-gradient(135deg, #192144 0%, #210E17 100%);
+  width: 95%;
+  height: 300px;
+  background-color: #1E162B;
+  border-radius: 15px;
+  padding: 15px;
+}
+.reason-item h3 {
+  font-size: 23px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.reason-item img {
+  position: absolute;
+  bottom: 25px;
+  right: 15px;
 }
 
 /* ---------- FAQ ---------- */
