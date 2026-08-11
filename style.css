@@ -353,19 +353,58 @@ details.faq-item[open] .faq-plus {
   line-height: 1.5;
 }
 
+/* ---------- EMAIL CTA ---------- */
+.email-cta-section {
+    width: 85%;
+    margin: 0 auto;
+}
+
+.email-cta p{
+   text-align: center;
+   margin-bottom: 12px;
+}
+.email-cta input{
+    width: 100%;
+}
+.email-cta .ctaBtn{
+    width: 50%;
+    height: 50px;
+    font-size: 25px;
+    margin: auto;
+    margin-top: 10px;
+    background-color: #e50914;
+    color: #fff;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+}
+.email-cta .ctaBtn:hover{
+    background-color: #b0060f;
+}
+.email-cta-section p{
+    width: 90%;
+    color: rgb(168, 168, 168);
+    margin: auto;
+    text-align: justify;
+    margin-top: 10px;
+}
+
 /* ---------- FOOTER ---------- */
 .footer {
   padding: 50px 4% 70px;
   color: #808080;
-  font-size: 13px;
+  font-size: 16px;
 }
 
 .footer .container {
-  max-width: 900px;
+  width: 90%;
+  margin: auto;
 }
 
 .footer-contact {
   margin-bottom: 24px;
+  text-decoration: underline;
+  cursor: pointer;
 }
 
 .footer-links {
@@ -373,6 +412,10 @@ details.faq-item[open] .faq-plus {
   grid-template-columns: repeat(2, 1fr);
   gap: 14px 20px;
   margin-bottom: 24px;
+}
+.footer p{
+    margin: 30px 0;
+    font-size: 14px;
 }
 
 @media (min-width: 700px) {
