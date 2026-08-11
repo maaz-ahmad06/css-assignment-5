@@ -203,20 +203,20 @@ img {
 .btn-get-started:hover {
   background: #b0060f;
 }
-.email-cta p{
-font-size: 15px;
-color: #b3b3b3;
-margin-top: 10px;
+.email-cta p {
+  font-size: 15px;
+  color: #b3b3b3;
+  margin-top: 10px;
 }
 
-hr{
-    width: 95%;
-    margin: auto;
+hr {
+  width: 95%;
+  margin: auto;
 }
 /* ---------- TRENDING SECTION ---------- */
 .trending-section {
-    width: 85%;
-    margin: auto;
+  width: 85%;
+  margin: auto;
   padding: 20px 4% 60px;
 }
 
@@ -236,10 +236,10 @@ hr{
   position: relative;
   overflow: visible;
 }
-.trending-item:hover{
-    transform: scale(1.05);
-    transition: transform 0.3s ease;
-    cursor: pointer;
+.trending-item:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+  cursor: pointer;
 }
 
 .trending-item img {
@@ -265,8 +265,8 @@ hr{
 
 /* ---------- MORE REASONS ---------- */
 .more-reasons {
-    width: 85%;
-    margin: auto;
+  width: 85%;
+  margin: auto;
   padding: 20px 4% 60px;
 }
 
@@ -284,10 +284,10 @@ hr{
 .reason-item {
   position: relative;
   overflow: visible;
-  background: linear-gradient(135deg, #192144 0%, #210E17 100%);
+  background: linear-gradient(135deg, #192144 0%, #210e17 100%);
   width: 95%;
   height: 300px;
-  background-color: #1E162B;
+  background-color: #1e162b;
   border-radius: 15px;
   padding: 15px;
 }
@@ -304,25 +304,24 @@ hr{
 
 /* ---------- FAQ ---------- */
 .faq-section {
-  max-width: 800px;
+  width: 85%;
   margin: 0 auto;
   padding: 20px 4% 60px;
 }
 
 .faq-section h2 {
-  font-size: clamp(26px, 4vw, 40px);
+  font-size: 24px;
   font-weight: 700;
   margin-bottom: 24px;
-  text-align: center;
 }
 
 details.faq-item {
   background: #2d2d2d;
-  margin-bottom: 3px;
-  border-radius: 3px;
+  margin-bottom: 8px;
 }
 
 details.faq-item summary {
+  height: 84px;
   list-style: none;
   cursor: pointer;
   padding: 20px 24px;
