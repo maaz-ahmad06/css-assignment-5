@@ -327,16 +327,19 @@ hr {
   border-radius: 15px;
   padding: 15px;
 }
+
 .reason-item h3 {
   font-size: 23px;
   font-weight: 700;
   margin-bottom: 20px;
 }
+
 .reason-item img {
   position: absolute;
   bottom: 25px;
   right: 15px;
 }
+
 @media (max-width: 900px) {
   .reasons-grid {
     grid-template-columns: 1fr;
@@ -376,6 +379,7 @@ details.faq-item summary {
   align-items: center;
   justify-content: space-between;
 }
+
 details.faq-item summary::-webkit-details-marker {
   display: none;
 }
