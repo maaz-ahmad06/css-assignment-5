@@ -472,38 +472,34 @@ details.faq-item[open] .faq-plus {
   margin-bottom: 24px;
 }
 
-.footer-lang{
+.footer-lang {
   padding: 8px 18px;
   background-color: #0F0F0F;
   color: white;
   border-radius: 3px;
 }
+
 .footer p {
   margin: 30px 0;
   font-size: 14px;
 }
 
-@media screen and (max-width: 425px) {
-  .footer-links {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    gap: 14px 20px;
-    margin-bottom: 24px;
-  }
-}
-@media screen and (max-width: 768px) {
-  .footer-links {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 14px 20px;
-    margin-bottom: 24px;
-  }
-}
+/* Largest breakpoint pehle */
 @media screen and (max-width: 1024px) {
   .footer-links {
-    display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 14px 20px;
-    margin-bottom: 24px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .footer-links {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Smallest breakpoint sabse aakhir me - highest priority */
+@media screen and (max-width: 425px) {
+  .footer-links {
+    grid-template-columns: repeat(1, 1fr);
   }
 }
